@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Survey monkey !</title>
+    <link rel="stylesheet" href="stylesheets/post.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAweome CDN Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+
+  <div class="my-element" id="my-element">
+    <header
+      style="
+        color: #fff;
+        font-size: 7rem;
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+      ">
+      SURVEY MONKEY
+    </header>
+  </div>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <section class="post">
+          <header>Create Your Feedback post</header>
+          <form action="#">
+            <div class="content">
+              <img src="images/logo/post/logo.jpg" alt="logo" />
+              <div class="details">
+                <p>Survey Mnokey</p>
+                <div class="privacy">
+                  <i class="fas fa-user-friends"></i>
+                  <span>Friends</span>
+                  <i class="fas fa-caret-down"></i>
+                </div>
+              </div>
+            </div>
+            <textarea
+              placeholder="What's on your mind ?"
+              spellcheck="false"
+              required></textarea>
+            <div class="theme-emoji">
+              <img src="images/logo/post/theme.svg" alt="theme" />
+              <img src="images/logo/post/smile.svg" alt="smile" />
+            </div>
+            <div class="options">
+              <ul class="list">
+                <li>
+                  <img src="images/logo/post/gallery.svg" alt="gallery" />
+                </li>
+                <li><img src="images/logo/post/tag.svg" alt="gallery" /></li>
+                <li><img src="images/logo/post/emoji.svg" alt="gallery" /></li>
+                <li><img src="images/logo/post/mic.svg" alt="gallery" /></li>
+                <li><img src="images/logo/post/more.svg" alt="gallery" /></li>
+              </ul>
+            </div>
+            <button>Post</button>
+          </form>
+        </section>
+        <section class="audience">
+          <header>
+            <div class="arrow-back"><i class="fas fa-arrow-left"></i></div>
+            <p>Select Audience</p>
+          </header>
+          <div class="content">
+            <p>Who can see your post?</p>
+            <span
+              >Your post will show up in News Feed, on your profile and in
+              search results.</span
+            >
+          </div>
+          <ul class="list">
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                <div class="details">
+                  <p>Public</p>
+                  <span>Anyone on or off Facebook</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li class="active">
+              <div class="column">
+                <div class="icon"><i class="fas fa-user-friends"></i></div>
+                <div class="details">
+                  <p>Friends</p>
+                  <span>Your friends on Facebook</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                <div class="details">
+                  <p>Specific</p>
+                  <span>Only show to some friends</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <div class="details">
+                  <p>Only me</p>
+                  <span>Only you can see your post</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+            <li>
+              <div class="column">
+                <div class="icon"><i class="fas fa-cog"></i></div>
+                <div class="details">
+                  <p>Custom</p>
+                  <span>Include and exclude friends</span>
+                </div>
+              </div>
+              <div class="radio"></div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container"),
+        privacy = container.querySelector(".post .privacy"),
+        arrowBack = container.querySelector(".audience .arrow-back");
+
+      privacy.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      arrowBack.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      </ul>
+      <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
